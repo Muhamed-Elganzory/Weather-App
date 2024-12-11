@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Images/weather-app.png" type="image/x-icon">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="../Style/all.min.css">
+    <link rel="stylesheet" href="../Style/bootstrap.min.css">
+    <link rel="stylesheet" href="../Style/Weather.css">
+</head>
+
+<body>
+    <!--^ Nav-Bar -->
+    <nav class="navbar navbar-expand-lg bg-dark p-4 z-1 w-100 position-fixed shadow">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../Images/weather-app.png" alt="Weather icon" class="w-100 d-block" height="38"
+                        width="64">
+                </a>
+                <div class="title">
+                    <h1 class="lead text-white p-0 m-0">Weather</h1>
+                    <span class="text-secondary p-0 m-0 ">Tagline goes here</span>
+                </div>
+            </div>
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item p-2">
+                        <a class="w-100 btn bg-opacity-25 text-white rounded-pill ps-3 pe-3" aria-current="page"
+                            href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link w-100 btn bg-opacity-25 text-white rounded-pill ps-3 pe-3" href="#">News</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link w-100 btn bg-opacity-25 text-white rounded-pill ps-3 pe-3" href="#">Live
+                            Cameras</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link w-100 btn bg-opacity-25 text-white rounded-pill ps-3 pe-3"
+                            href="#">Photos</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="active w-100 btn bg-opacity-25 text-white rounded-pill ps-3 pe-3" aria-current="page"
+                            href="../index.html">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="p-top pb-5 mb-50">
+        <section class="hero mb-5">
+            <div class="container pt-4">
+                <div class="pt-5 pb-5 position-relative">
+                    <div class="form-control pt-3 pb-3 rounded-pill bg-dark border border-0 opacity-75">
+                        <a href="../index.html" class="custom-link">Home</a>
+                        <span class="text-white">&#10137; Contact</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container mt-mi">
+                <div class="container-fluid m-auto pt-5 pb-5 row">
+                    <div class="col-md-7">
+                        <div class="card p-0 bg-dark mt-4 h-400">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d274234.49158365256!2d29.971079861008487!3d30.7446798967034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1733874423655!5m2!1sen!2seg"
+                                style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade" class="w-100">
+                            </iframe>
+                            <div class="card-footer pt-4">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="fa fa-map-location custom-link"></i>
+                                    <div>
+                                        <p class="m-0 custom-link">Company Name INC.</p>
+                                        <p class="m-0 custom-link">2803 Avenue Street, Los Angeles</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 pt-3">
+                                    <i class="fa fa-phone custom-link"></i>
+                                    <p class="m-0 custom-link">+01061650979</p>
+                                    <i class="fa fa-map-location custom-link"></i>
+                                    <p class="m-0 custom-link">Company Name INC.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="pt-4 pb-3">
+                            <h1 class="text-white">Contact us</h1>
+                            <p class="text-white-50">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consectetur inventore
+                                ducimus,
+                                facilis, numquam id
+                                soluta omnis eius recusandae nesciunt vero repellat harum cum. Nisi facilis odit hic,
+                                ipsum sed!
+                            </p>
+                        </div>
+                        <form class="">
+                            <div class="row gy-3 gx-3">
+                                <div class="col-md-6 ">
+                                    <input type="text" class="btn btn-dark form-control rounded-3 mt-2 placeholdercost"
+                                        placeholder="Your name">
+                                    <input type="text" class="btn btn-dark form-control rounded-3 mt-2 placeholdercost"
+                                        placeholder="Email address">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="btn btn-dark form-control rounded-3 mt-2 placeholdercost"
+                                        placeholder="Company name">
+                                    <input type="text" class="btn btn-dark form-control rounded-3 mt-2 placeholdercost"
+                                        placeholder="Website">
+                                </div>
+                            </div>
+                            <textarea name="Message" id="Message" rows="5"
+                                class="form-control-plaintext btn btn-dark mt-2" placeholder="Message"></textarea>
+                            <button type="submit" class="btn btn-dark mt-3 ps-4 pe-4 ms-auto d-block">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer pb-4 ps-lg-5">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <div class="pt-5 pb-5 position-relative">
+                                <input type="text" placeholder="Enter your email to subscribe"
+                                    class="form-control pt-3 pb-3 rounded-pill bg-dark border border-0 opacity-75">
+                                <input type="button" value="Subscription"
+                                    class="btn btn-dark rounded-pill ps-4 pe-4 position-absolute btn-find  border-dark-subtle">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="social text-center">
+                                <a href="" class="fs-3 p-2 m-1 text-white-50 bg-dark rounded-3"><i
+                                        class="fa-brands fa-facebook"></i></a>
+                                <a href="" class="fs-3 p-2 m-1 text-white-50 bg-dark rounded-3"><i
+                                        class="fa-brands fa-twitter"></i></a>
+                                <a href="" class="fs-3 p-2 m-1 text-white-50 bg-dark rounded-3"><i
+                                        class="fa-brands fa-google-plus"></i></a>
+                                <a href="" class="fs-3 p-2 m-1 text-white-50 bg-dark rounded-3"><i
+                                        class="fa-brands fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <article class="pt-lg-0 pt-4">
+                    <span class="text-white-50 fs-6 lead text-center d-block">Copyright &copy; Weather 2024 All rights
+                        reserved</span>
+                    <span class="text-white-50 fs-6 lead text-center d-block">Designed by Mohamed El-ganzory.</span>
+                </article>
+            </div>
+        </div>
+    </footer>
+    <script src="../Script/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

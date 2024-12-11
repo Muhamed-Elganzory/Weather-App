@@ -1,0 +1,139 @@
+/** Home Page */
+:root {
+    --primary-background: #1E202B;
+    --background-header-card: #2D303D;
+    --background-body-card: #323544;
+    --text-gray-card: #BFC1C8;
+}
+
+.bg-dark,
+body {
+    background-color: var(--primary-background) !important;
+}
+
+/** Nav Bar */
+.btn:hover {
+    color: var(--bs-btn-hover-color);
+    background-color: #2a2c3a9a;
+}
+
+/** First Section (Hero) */
+.p-top {
+    padding-top: 90px !important;
+}
+
+.btn-find {
+    top: 57px;
+    right: 10px;
+}
+
+.hero {
+    background-image: url(../Images/banner.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding: 70px 0px;
+    background-size: cover;
+    object-fit: cover;
+    height: 400px;
+}
+
+.mt-mi {
+    margin-top: -200px !important;
+}
+
+.mb-50 {
+    margin-bottom: 30px !important;
+}
+
+.temp-container {
+    top: 35% !important;
+}
+
+/*#2D303D #323544*/
+
+/** Input Location Button Find */
+.form-control:focus {
+    border-color: var(--primary-background);
+    box-shadow: 0 0 0 .25rem rgba(216, 168, 10, 0.135);
+}
+
+.border-dark-subtle,
+.card {
+    border-color: rgba(128, 128, 128, 0.543) !important;
+}
+
+input.form-control,
+input.form-control:focus {
+    color: white;
+}
+
+input.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/** Cards Weather*/
+.card-header {
+    background-color: var(--background-header-card) !important;
+}
+
+.card-body {
+    background-color: var(--background-body-card) !important;
+}
+
+.text-gray {
+    color: var(--text-gray-card) !important;
+}
+
+.bg-custom1 {
+    background-color: #222531 !important;
+}
+
+.bg-custom2 {
+    background-color: #262936 !important;
+}
+
+.my-rounded1 {
+    border-top-left-radius: 10px !important;
+}
+
+.my-rounded2 {
+    border-top-right-radius: 10px !important;
+}
+
+.card {
+    height: 300px !important;
+}
+
+/**/
+.footer {
+    background-color: #222531;
+}
+
+.mt-10 {
+    margin-top: 200px;
+}
+
+/** Contact Page */
+.custom-link {
+    text-decoration: none;
+    color: var(--text-gray-card);
+}
+
+input.form-control.placeholdercost::placeholder {
+    color: rgba(128, 128, 128, 0.842);
+}
+
+.placeholdercost,
+textarea {
+    text-align: left !important;
+}
+
+iframe {
+    height: 70%;
+    border-radius: 5px !important;
+    padding: 0.2px !important;
+}
+
+.h-400 {
+    height: 450px !important;
+}

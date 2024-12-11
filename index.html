@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Images/weather-app.png" type="image/x-icon">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./Style/all.min.css">
+    <link rel="stylesheet" href="./Style/bootstrap.min.css">
+    <link rel="stylesheet" href="./Style/Weather.css">
+</head>
+
+<body>
+    <!--^ Nav-Bar -->
+    <nav class="navbar navbar-expand-lg bg-dark p-4 z-1 w-100 position-fixed shadow">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./Images/weather-app.png" alt="Weather icon" class="w-100 d-block" height="38" width="64">
+                </a>
+                <div class="title">
+                    <h1 class="lead text-white p-0 m-0">Weather</h1>
+                    <span class="text-secondary p-0 m-0 ">Tagline goes here</span>
+                </div>
+            </div>
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item p-2">
+                        <a class="active w-100 btn bg-opacity-25 text-white rounded-pill ps-3 pe-3" aria-current="page"
+                            href="#">Home</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link w-100 btn bg-opacity-25 text-white rounded-pill ps-3 pe-3" href="#">News</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link w-100 btn bg-opacity-25 text-white rounded-pill ps-3 pe-3" href="#">Live
+                            Cameras</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link w-100 btn bg-opacity-25 text-white rounded-pill ps-3 pe-3"
+                            href="#">Photos</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link w-100 btn bg-opacity-25 text-white rounded-pill ps-3 pe-3"
+                            href="./Pages/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="p-top pb-5 mb-50">
+        <section class="hero mb-5">
+            <div class="container pt-4">
+                <div class="pt-5 pb-5 position-relative">
+                    <input type="text" placeholder="Find Your Location" id="findInput"
+                        class="form-control pt-3 pb-3 rounded-pill bg-dark border border-0 opacity-75">
+                    <input type="button" value="Find" id="btnFind"
+                        class="btn btn-dark rounded-pill ps-4 pe-4 position-absolute btn-find border-dark-subtle">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container mt-mi">
+                <div class="container-fluid m-auto pt-5 pb-5 row">
+                    <div class="col-md-4 p-0 m-0 pt-lg-2">
+                        <div class="card text-gray border-0 rounded-0 my-rounded1 bg-dark">
+                            <div class="card-header d-flex justify-content-between rounded-0 my-rounded1">
+                                <span id="firstDay"></span>
+                                <div>
+                                    <span id="monthNumber"></span>
+                                    <span id="monthText"></span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p class="lead" id="countryName"></p>
+                                    <div class="temp d-flex align-items-center">
+                                        <div class="d-flex">
+                                            <p class="h1 text-white" id="temp_C1"></p>
+                                            <span class="h1 text-white">&deg;C</span>
+                                        </div>
+                                        <img src="" alt="Status day" class="d-block ps-2" id="imageStatusDay1">
+                                    </div>
+                                    <p class="fs-6 link-info" id="statusWeather1"></p>
+                                    <footer class="blockquote-footer d-flex pt-4 fs-6">
+                                        <div class="one pe-2">
+                                            <i class="fa fa-umbrella"></i>
+                                            <i>20%</i>
+                                        </div>
+                                        <div class="two pe-2">
+                                            <i class="fas fa-wind"></i>
+                                            <i>18km/h</i>
+                                        </div>
+                                        <div class="three pe-2">
+                                            <i class="fa-solid fa-location-crosshairs"></i>
+                                            <i id="tz_location"></i>
+                                        </div>
+                                    </footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-0 m-0 pt-lg-2">
+                        <div class="card text-gray border-0 rounded-0 bg-dark">
+                            <div class="card-header bg-custom1 text-center rounded-0">
+                                <span id="secondDay"></span>
+                            </div>
+                            <div class="card-body bg-custom2 rounded-0">
+                                <blockquote class="blockquote mb-0">
+                                    <div class="temp d-flex flex-column align-items-center pt-4">
+                                        <img src="" id="imageStatusDay2" alt="Status day" class="d-block">
+                                        <!-- Max Temp -->
+                                        <div class="d-flex">
+                                            <p class="h2 text-white" id="temp_C2"></p>
+                                            <span class="h1 text-white">&deg;C</span>
+                                        </div>
+                                        <!-- Min Temp -->
+                                        <div class="d-flex">
+                                            <p class="h4 text-secondary" id="temp_Min2"></p>
+                                            <span class="h4 text-secondary">&deg;C</span>
+                                        </div>
+                                        <p class="fs-6 link-info" id="statusWeather2"></p>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-0 m-0 pt-lg-2">
+                        <div class="card text-gray border-0 rounded-0 my-rounded2 bg-dark">
+                            <div class="card-header text-center rounded-0 my-rounded2">
+                                <span id="thirdDay"></span>
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <div class="temp d-flex flex-column align-items-center pt-4">
+                                        <img src="" id="imageStatusDay3" alt="Status day" class="d-block">
+                                        <!-- Max Temp -->
+                                        <div class="d-flex">
+                                            <p class="h2 text-white" id="temp_C3"></p>
+                                            <span class="h1 text-white">&deg;C</span>
+                                        </div>
+                                        <!-- Min Temp -->
+                                        <div class="d-flex">
+                                            <p class="h4 text-secondary" id="temp_Min3"></p>
+                                            <span class="h4 text-secondary">&deg;C</span>
+                                        </div>
+                                        <p class="fs-6 link-info" id="statusWeather3"></p>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer pb-4 ps-lg-5">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <div class="pt-5 pb-5 position-relative">
+                                <input type="text" placeholder="Enter your email to subscribe"
+                                    class="form-control pt-3 pb-3 rounded-pill bg-dark border border-0 opacity-75">
+                                <input type="button" value="Subscription"
+                                    class="btn btn-dark rounded-pill ps-4 pe-4 position-absolute btn-find  border-dark-subtle">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="social text-center">
+                                <a href="" class="fs-3 p-2 m-1 text-white-50 bg-dark rounded-3"><i
+                                        class="fa-brands fa-facebook"></i></a>
+                                <a href="" class="fs-3 p-2 m-1 text-white-50 bg-dark rounded-3"><i
+                                        class="fa-brands fa-twitter"></i></a>
+                                <a href="" class="fs-3 p-2 m-1 text-white-50 bg-dark rounded-3"><i
+                                        class="fa-brands fa-google-plus"></i></a>
+                                <a href="" class="fs-3 p-2 m-1 text-white-50 bg-dark rounded-3"><i
+                                        class="fa-brands fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <article class="pt-lg-0 pt-4">
+                    <span class="text-white-50 fs-6 lead text-center d-block">Copyright &copy; Weather 2024 All rights
+                        reserved</span>
+                    <span class="text-white-50 fs-6 lead text-center d-block">Designed by Mohamed El-ganzory.</span>
+                </article>
+            </div>
+        </div>
+    </footer>
+    <script src="./Script/Weather.js"></script>
+    <script src="./Script/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
