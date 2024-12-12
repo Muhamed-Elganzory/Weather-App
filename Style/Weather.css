@@ -11,6 +11,14 @@ body {
     background-color: var(--primary-background) !important;
 }
 
+.top-20 {
+    top: 13% !important;
+}
+
+.over-flow-hidden {
+    overflow: hidden !important;
+}
+
 /** Nav Bar */
 .btn:hover {
     color: var(--bs-btn-hover-color);

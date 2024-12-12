@@ -1,4 +1,3 @@
-
 /**
  * 
  * 🛜 Details For API.
@@ -6,7 +5,6 @@
  *      API Key: b3b2724f56a941fbbb8125712241012
  *      https://api.weatherapi.com/v1/forecast.json?key=b3b2724f56a941fbbb8125712241012&q=cairo&days=2
  */
-
 
 /**
  * 
@@ -54,18 +52,12 @@ let objOfCountries = {};
  * ✊ Fetch value from input of find, if user clicked on find button.
  */
 function listenerOfFind() {
-    /**
-     * 
-     * Input.
-     */
+    // Country Input.
     DOMElements.findInput.addEventListener('input', function (e) {
         getData(e.target.value);
     });
 
-    /**
-     * 
-     * Find Button.
-     */
+    // Find Button.
     DOMElements.btnFind.addEventListener('click', function () {
         getData(DOMElements.findInput.value);
         clearData();
@@ -76,16 +68,15 @@ function listenerOfFind() {
  * 
  * 📝 Get data from API.
  */
-function getData(queryParameter = 'cairo') {
-    let xml = new XMLHttpRequest();
-    xml.open('GET', `https://api.weatherapi.com/v1/forecast.json?key=b3b2724f56a941fbbb8125712241012&q=${queryParameter}&days=3`);
-    xml.send();
-    xml.addEventListener('readystatechange', function () {
-        if (xml.readyState === 4) {
-            objOfCountries = JSON.parse(xml.response);
-            display();
-        }
-    });
+async function getData(queryParameter = 'cairo') {
+    try {
+        let data = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=b3b2724f56a941fbbb8125712241012&q=${queryParameter}&days=3`);
+        data = await data.json();
+        objOfCountries = data;
+        display();
+    } catch (error) {
+        alert("I can't retrieve data from the server, maybe Your network is weak.");
+    }
 }
 
 /**
@@ -96,9 +87,10 @@ function getData(queryParameter = 'cairo') {
  */
 function getDay(dateParam) {
     let date = new Date(dateParam);
-    let numOfDay = date.getDay();
+    let numOfDay = date.getDay() + 1;
     let arrWeekDay = ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
-    return arrWeekDay[numOfDay + 1];
+    if (numOfDay == 7) { numOfDay = 0 }
+    return arrWeekDay[numOfDay];
 }
 
 /**
@@ -111,6 +103,7 @@ function getMonth_Text(dateParam) {
     let date = new Date(dateParam);
     let numOfMonth = date.getMonth();
     let arrMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    if (numOfMonth == 12) { numOfMonth = 0 }
     return arrMonths[numOfMonth];
 }
 
