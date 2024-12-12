@@ -75,7 +75,7 @@ async function getData(queryParameter = 'cairo') {
         objOfCountries = data;
         display();
     } catch (error) {
-        alert("I can't retrieve data from the server, maybe Your network is weak.");
+        console.log(error);
     }
 }
 
